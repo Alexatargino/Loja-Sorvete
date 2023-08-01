@@ -5,7 +5,6 @@ from .models import Sorvete
 
 def sorvete_pedido(request):
     if request.method=='POST':
-        print('to aqui')
         form = Sorveteforms(request.POST)
         form.save()
         return redirect('pedido')# redireciona para a pagina de sucesso após salvar
